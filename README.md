@@ -1,5 +1,6 @@
-# SQL_Server_Integration_Services
- SSIS
+# SQL_Server_Integration_Services_Lab
+SSIS
+
 Projekt: SQL_Server_Integration_Services
 
 W tej części prowadzę szkolenie z SSIS
