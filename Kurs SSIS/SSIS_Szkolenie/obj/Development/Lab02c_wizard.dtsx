@@ -12,8 +12,8 @@
   DTS:LocaleID="1045"
   DTS:MaxErrorCount="0"
   DTS:ObjectName="Lab02c_wizard"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{4DE66967-041A-441B-BCFF-558C78E4543E}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{C593B936-57AC-4B3F-8B24-3AB2AA7114B2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1012,25 +1012,37 @@
         <NodeLayout
           Size="164,42"
           Id="Package\Data Flow Task 1"
-          TopLeft="22,107.5" />
+          TopLeft="323,214.5" />
         <NodeLayout
           Size="197,42"
           Id="Package\Preparation SQL Task 1"
-          TopLeft="5.50000000000001,5.5" />
+          TopLeft="158.5,115.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[{01B5569F-24CB-4DEA-B676-912FA11EEAAF\}]"
-          TopLeft="104,47.5">
+          TopLeft="257,157.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="148,57"
               Start="0,0"
-              End="0,52.5">
+              End="148,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,24.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.5"
+                    Point2="0,28.5"
+                    Point3="4,28.5" />
+                  <mssgle:LineSegment
+                    End="144,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144,28.5"
+                    Point2="148,28.5"
+                    Point3="148,32.5" />
+                  <mssgle:LineSegment
+                    End="148,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
