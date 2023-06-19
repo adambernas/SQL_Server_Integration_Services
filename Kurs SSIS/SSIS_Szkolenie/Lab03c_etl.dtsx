@@ -11,11 +11,64 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Lab03c_etl"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{12B25B6E-EA1C-4852-963E-7D5D1791E470}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{229D18CF-4E8E-4099-AD4A-94CCA4682C7D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Cache_category]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{33A59D87-9F74-4E43-AFD1-07B51DC646BA}"
+      DTS:ObjectName="Cache_category">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager>
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="3"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="ProductCategoryID"
+              DTS:DTSID="{DE3EECA7-E41A-48E1-9C9D-9DC7F027F155}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="130"
+              DTS:Length="50"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{E8CB7B7A-3766-491A-AC45-67D5E46501A7}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Cache_subcategory]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{02A28E67-9A19-4C8E-9E88-186FED2C236F}"
+      DTS:ObjectName="Cache_subcategory">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager>
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="3"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="ProductSubcategoryID"
+              DTS:DTSID="{9CAC3DF7-E736-43FF-8ECE-C74D81A5A280}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="3"
+              DTS:ObjectName="ProductCategoryID"
+              DTS:DTSID="{321161DC-0A5E-42DE-ADD4-D73D58391D98}"
+              DTS:CreationName="" />
+            <DTS:CacheColumn
+              DTS:DataType="130"
+              DTS:Length="50"
+              DTS:ObjectName="SubcategoryName"
+              DTS:DTSID="{D07FA43C-7AEE-4E41-A4DB-E642F4A80B40}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Conn_Products]"
       DTS:CreationName="FLATFILE"
@@ -1834,14 +1887,14 @@ where [refTable].[ProductSubcategoryID] = ?</property>
         <NodeLayout
           Size="147,42"
           Id="Package\DFT Products"
-          TopLeft="219.5,133.5" />
+          TopLeft="392.5,351.5" />
         <NodeLayout
           Size="175,42"
           Id="Package\SQL Prepare tables"
-          TopLeft="125,40" />
+          TopLeft="298,258" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="212.5,82">
+          TopLeft="385.5,300">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1882,13 +1935,41 @@ where [refTable].[ProductSubcategoryID] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="130,42"
+          Id="Package\DFT Products\DRV Profil"
+          TopLeft="430,175" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\DFT Products\Multicast"
+          TopLeft="398,431" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\DFT Products\OLE_DST Bikes"
+          TopLeft="35,543" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT Products\LKP Subcagtegory"
+          TopLeft="516,294" />
+        <NodeLayout
           Size="173,42"
           Id="Package\DFT Products\OLE SRC Products"
           TopLeft="310,66" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\DFT Products\DRV Profil"
-          TopLeft="430,175" />
+          Size="139,42"
+          Id="Package\DFT Products\SPLIT Bikes"
+          TopLeft="130,335" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT Products\DFT_File Products"
+          TopLeft="559,540" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\DFT Products\LKP Category"
+          TopLeft="698,429" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\DFT Products\OLE_DST NotBikes"
+          TopLeft="251,543" />
         <EdgeLayout
           Id="Package\DFT Products.Paths[OLE DB Source Output]"
           TopLeft="396.5,108">
@@ -1921,232 +2002,6 @@ where [refTable].[ProductSubcategoryID] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DFT Products\LKP Subcagtegory"
-          TopLeft="516,294" />
-        <EdgeLayout
-          Id="Package\DFT Products.Paths[Derived Column Output]"
-          TopLeft="495,217">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="106.5,77"
-              Start="0,0"
-              End="106.5,69.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5"
-                    Point2="0,38.5"
-                    Point3="4,38.5" />
-                  <mssgle:LineSegment
-                    End="102.5,38.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="102.5,38.5"
-                    Point2="106.5,38.5"
-                    Point3="106.5,42.5" />
-                  <mssgle:LineSegment
-                    End="106.5,69.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="147,42"
-          Id="Package\DFT Products\LKP Category"
-          TopLeft="698,429" />
-        <EdgeLayout
-          Id="Package\DFT Products.Paths[Lookup Match Output]"
-          TopLeft="601.5,336">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="170,93"
-              Start="0,0"
-              End="170,85.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.5"
-                    Point2="0,46.5"
-                    Point3="4,46.5" />
-                  <mssgle:LineSegment
-                    End="166,46.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="166,46.5"
-                    Point2="170,46.5"
-                    Point3="170,50.5" />
-                  <mssgle:LineSegment
-                    End="170,85.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="36.80861328125,51.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="123,42"
-          Id="Package\DFT Products\Multicast"
-          TopLeft="398,431" />
-        <EdgeLayout
-          Id="Package\DFT Products.Paths[Lookup Match Output1]"
-          TopLeft="698,451">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-177,0"
-              Start="0,0"
-              End="-169.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-169.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-132.94138671875,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DFT Products\DFT_File Products"
-          TopLeft="559,540" />
-        <EdgeLayout
-          Id="Package\DFT Products.Paths[Multicast Output 1]"
-          TopLeft="459.5,473">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="185,67"
-              Start="0,0"
-              End="185,59.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.5"
-                    Point2="0,33.5"
-                    Point3="4,33.5" />
-                  <mssgle:LineSegment
-                    End="181,33.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="181,33.5"
-                    Point2="185,33.5"
-                    Point3="185,37.5" />
-                  <mssgle:LineSegment
-                    End="185,59.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="139,42"
-          Id="Package\DFT Products\SPLIT Bikes"
-          TopLeft="130,335" />
-        <EdgeLayout
-          Id="Package\DFT Products.Paths[Multicast Output 2]"
-          TopLeft="459.5,431">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-227.25,-54"
-              Start="0,0"
-              End="-227.25,-46.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-31.3223529411765" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-31.3223529411765"
-                    Point2="0,-35.3223529411765"
-                    Point3="-4,-35.3223529411765" />
-                  <mssgle:LineSegment
-                    End="-223.25,-35.3223529411765" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-223.25,-35.3223529411765"
-                    Point2="-227.25,-35.3223529411765"
-                    Point3="-227.25,-39.3223529411765" />
-                  <mssgle:LineSegment
-                    End="-227.25,-46.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\DFT Products\OLE_DST Bikes"
-          TopLeft="35,543" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\DFT Products\OLE_DST NotBikes"
-          TopLeft="251,543" />
-        <EdgeLayout
-          Id="Package\DFT Products.Paths[Bikes]"
-          TopLeft="166.75,377">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-52.25,166"
-              Start="0,0"
-              End="-52.25,158.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.4164705882353" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,53.4164705882353"
-                    Point2="0,57.4164705882353"
-                    Point3="-4,57.4164705882353" />
-                  <mssgle:LineSegment
-                    End="-48.25,57.4164705882353" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-48.25,57.4164705882353"
-                    Point2="-52.25,57.4164705882353"
-                    Point3="-52.25,61.4164705882353" />
-                  <mssgle:LineSegment
-                    End="-52.25,158.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-38.102578125,62.4164705882353,23.95515625,9.7294921875"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2185,11 +2040,209 @@ where [refTable].[ProductSubcategoryID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Products.Paths[Multicast Output 2]"
+          TopLeft="459.5,431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-227.25,-54"
+              Start="0,0"
+              End="-227.25,-46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-31.3223529411765" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-31.3223529411765"
+                    Point2="0,-35.3223529411765"
+                    Point3="-4,-35.3223529411765" />
+                  <mssgle:LineSegment
+                    End="-223.25,-35.3223529411765" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-223.25,-35.3223529411765"
+                    Point2="-227.25,-35.3223529411765"
+                    Point3="-227.25,-39.3223529411765" />
+                  <mssgle:LineSegment
+                    End="-227.25,-46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Products.Paths[Multicast Output 1]"
+          TopLeft="459.5,473">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="185,67"
+              Start="0,0"
+              End="185,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.5"
+                    Point2="0,33.5"
+                    Point3="4,33.5" />
+                  <mssgle:LineSegment
+                    End="181,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="181,33.5"
+                    Point2="185,33.5"
+                    Point3="185,37.5" />
+                  <mssgle:LineSegment
+                    End="185,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Products.Paths[Lookup Match Output1]"
+          TopLeft="698,451">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-177,0"
+              Start="0,0"
+              End="-169.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-169.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-132.94138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Products.Paths[Lookup Match Output]"
+          TopLeft="601.5,336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170,93"
+              Start="0,0"
+              End="170,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.5"
+                    Point2="0,46.5"
+                    Point3="4,46.5" />
+                  <mssgle:LineSegment
+                    End="166,46.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="166,46.5"
+                    Point2="170,46.5"
+                    Point3="170,50.5" />
+                  <mssgle:LineSegment
+                    End="170,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="36.80861328125,51.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Products.Paths[Derived Column Output]"
+          TopLeft="495,217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.5,77"
+              Start="0,0"
+              End="106.5,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5"
+                    Point2="0,38.5"
+                    Point3="4,38.5" />
+                  <mssgle:LineSegment
+                    End="102.5,38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="102.5,38.5"
+                    Point2="106.5,38.5"
+                    Point3="106.5,42.5" />
+                  <mssgle:LineSegment
+                    End="106.5,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT Products.Paths[Bikes]"
+          TopLeft="166.75,377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-52.25,166"
+              Start="0,0"
+              End="-52.25,158.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.4164705882353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.4164705882353"
+                    Point2="0,57.4164705882353"
+                    Point3="-4,57.4164705882353" />
+                  <mssgle:LineSegment
+                    End="-48.25,57.4164705882353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.25,57.4164705882353"
+                    Point2="-52.25,57.4164705882353"
+                    Point3="-52.25,61.4164705882353" />
+                  <mssgle:LineSegment
+                    End="-52.25,158.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-38.102578125,62.4164705882353,23.95515625,9.7294921875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT Products\OLE SRC Products">
+    design-time-name="Package\DFT Products\OLE_DST Bikes">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2207,7 +2260,7 @@ where [refTable].[ProductSubcategoryID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2217,10 +2270,23 @@ where [refTable].[ProductSubcategoryID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT Products\OLE SRC Products">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -2230,7 +2296,7 @@ where [refTable].[ProductSubcategoryID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2240,23 +2306,10 @@ where [refTable].[ProductSubcategoryID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT Products\OLE_DST Bikes">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
