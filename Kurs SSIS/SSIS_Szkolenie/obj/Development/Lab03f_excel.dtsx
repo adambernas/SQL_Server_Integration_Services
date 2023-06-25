@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Lab03f_excel"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{A9F6ACEA-CED8-440D-96D0-D78C51560E5C}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{5CD0E95F-2BFE-4013-B803-AC8942E9832C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -255,6 +255,7 @@
       DTS:refId="Package\DTF Excel xlsx"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{67FE929E-73F3-4ED0-AE28-34C9969C6574}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
