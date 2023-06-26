@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAACg9NKMCS5PnLEf3Or9e9yfYxdULr+IEJ6sMwflGceTCwAAAAAOgAAAAAIAACAAAACFYyfsjgvwPgWJ9jRm2l21iGfG+ugkZCdM5klT8rgarZAAAACM+AlTU0VLEfyCwtJ4E1TQDt7PjgDbERghpsU+OBj/H1Lib2PsuK0v90UBEFalDabN3Q+Yy1PoYM+J8LrGPUdlhtGwVD3i+I06h/KdhxsOvwLBuYaLrPNmUvZNM8zIyijVt3DDpqfWlt181Ys41fE/a8SA9fMP2XCcIp6aDQVbmuERp9JqDY51brhju6GgqslAAAAApuCITKqXQPNeGsHPJewUHtgGpF2tU4v9ELi2AVeBFY+ciw5eI1S0QevFC9mqcgaSgeQ15uoKXeCgbwOul4u15w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAADVEj+QJHHYiZbNeLzrpsMNqtzX8etvvVLimmohm4S6fAAAAAAOgAAAAAIAACAAAAAlsgqn9xtDKrWz6K5tFn7z0uRIN+5y+2CjymFIxDVZt5AAAAAf4pthUQFXwDjFOhaLQ3Ti/UgJa1NIip9Lh91UYQKYCkdMcDy4bQJXz1S7QNOpymsZRxsrk79Xl6Xc+lC6+sRD7mBb4kR4AHFed1Gos0tOifMdvVTUyrIrerL6B9AsBXLaBvkeaT2iCzTt0DL5VQkr+QO1FLmhY+xfoiE9TRwvtOsxQjF+176KfrT4Zs8U7VlAAAAAbBHtBs8Cyd4vkipfWv5J39wL9qEIdGvrVGY6Vr/hFJy3C4blewooI36hD7XUiV3I+Pzigo/K03rz8K8kI9BYMg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -2201,10 +2201,10 @@
                 <SSIS:Property SSIS:Name="Name">Lab03f_excel</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5CD0E95F-2BFE-4013-B803-AC8942E9832C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A9F6ACEA-CED8-440D-96D0-D78C51560E5C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2237,7 +2237,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\wersja_sql_server.xls;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\wersja_sql_server.xls;Extended Properties="Excel 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2369,7 +2369,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\wersja_sql_server.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\wersja_sql_server.xlsx;Extended Properties="Excel 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2483,10 +2483,10 @@
                 <SSIS:Property SSIS:Name="Name">Lab04b_control_flow</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">6</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E00511B9-2336-4BDD-A121-75CBB3BF8DA8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F518510D-343F-4CC7-B806-F5CC99305F4E}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2551,21 +2551,6 @@
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.conn_CountriesTrg.ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\CountriesTrg\Countries1.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.conn_CountriesTrg.DataRowsToSkip">
