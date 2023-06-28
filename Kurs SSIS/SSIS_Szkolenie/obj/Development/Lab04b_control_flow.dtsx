@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Lab04b_control_flow"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{753763B4-1DF8-481A-9EAA-DE52197FF19A}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{140E512E-C6A0-458B-8AAC-377C26747F9A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -101,6 +101,15 @@
       DTS:ObjectName="FileName">
       <DTS:VariableValue
         DTS:DataType="8">Countries1.txt</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3CF5FA47-EB1C-4D45-BFCE-9597AEC48B0C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="i">
+      <DTS:VariableValue
+        DTS:DataType="3">1</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -428,22 +437,92 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\FILE Src - Trg"
-      DTS:CreationName="Microsoft.FileSystemTask"
-      DTS:Description="File System Task"
-      DTS:DTSID="{DD3A0B49-8FDD-47E9-B784-37D6C14AA8A4}"
-      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:refId="Package\For Loop Container"
+      DTS:AssignExpression="@i = @i +1"
+      DTS:CreationName="STOCK:FORLOOP"
+      DTS:Description="For Loop Container"
+      DTS:DTSID="{291B37AD-0839-40BF-AFAA-F31708D5523F}"
+      DTS:EvalExpression="@i  &lt; 4"
+      DTS:ExecutableType="STOCK:FORLOOP"
+      DTS:InitExpression="@i=1"
       DTS:LocaleID="-1"
-      DTS:ObjectName="FILE Src - Trg"
-      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:MaxConcurrent="1"
+      DTS:ObjectName="For Loop Container">
       <DTS:Variables />
-      <DTS:ObjectData>
-        <FileSystemData
-          TaskOverwriteDestFile="True"
-          TaskSourcePath="{AA4B338F-3E91-426A-BAAB-D369E45064A6}"
-          TaskDestinationPath="{82BAF7E5-1171-4801-BDA8-0256C3D44600}" />
-      </DTS:ObjectData>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\For Loop Container\CMD Open file"
+          DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:Description="Execute Process Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{F2FA8790-0469-405B-8E60-9067B1256E30}"
+          DTS:ExecutableType="Microsoft.ExecuteProcess"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="CMD Open file"
+          DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Arguments">@[$Project::FolderTrg]+ @[User::FileName]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExecuteProcessData
+              Executable="Notepad.exe"
+              Arguments="C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\CountriesTrg\Countries1.txt" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\For Loop Container\EXP fileName"
+          DTS:CreationName="Microsoft.ExpressionTask"
+          DTS:Description="Expression Task"
+          DTS:DTSID="{04E6D3CD-DE6E-4350-BEC6-6307BF4AD118}"
+          DTS:ExecutableType="Microsoft.ExpressionTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EXP fileName"
+          DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExpressionTask
+              Expression="@[User::FileName] = &quot;Countries&quot;+  (DT_WSTR, 1) @[User::i] +&quot;.txt&quot;" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\For Loop Container\FILE Src - Trg"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{DD3A0B49-8FDD-47E9-B784-37D6C14AA8A4}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FILE Src - Trg"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="{AA4B338F-3E91-426A-BAAB-D369E45064A6}"
+              TaskDestinationPath="{82BAF7E5-1171-4801-BDA8-0256C3D44600}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\For Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{5D9AA526-C66B-4610-8FA9-28EB19F07C36}"
+          DTS:From="Package\For Loop Container\EXP fileName"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\For Loop Container\FILE Src - Trg" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\For Loop Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{52D45424-60C0-4ACC-B32D-FC8BC8EC763E}"
+          DTS:From="Package\For Loop Container\FILE Src - Trg"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\For Loop Container\CMD Open file" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Notify Operator Task"
@@ -502,12 +581,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{2B0F9C6D-F744-40A3-BE94-A9FB44BBD926}"
-      DTS:From="Package\FILE Src - Trg"
+      DTS:DTSID="{372A3A99-2F55-413C-984B-DEDF92903FC3}"
+      DTS:From="Package\For Loop Container"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\SQL Prepare Countries"
-      DTS:Value="2" />
+      DTS:To="Package\SQL Prepare Countries" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
@@ -516,14 +594,6 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\FILE Delete file" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
-      DTS:CreationName=""
-      DTS:DTSID="{09DF7036-32A7-4D7D-BE35-4D180E839FF9}"
-      DTS:From="Package\FILE Src - Trg"
-      DTS:ObjectName="Constraint 3"
-      DTS:To="Package\Notify Operator Task"
-      DTS:Value="1" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
@@ -564,22 +634,22 @@
         <NodeLayout
           Size="169,42"
           Id="Package\DFT Load Product"
-          TopLeft="292.5,249.5" />
+          TopLeft="546.5,318.5" />
         <NodeLayout
           Size="154,42"
           Id="Package\FILE Delete file"
-          TopLeft="406,344" />
+          TopLeft="660,413" />
         <NodeLayout
-          Size="148,42"
-          Id="Package\FILE Src - Trg"
-          TopLeft="117,47" />
+          Size="180,42"
+          Id="Package\Notify Operator Task"
+          TopLeft="823,119" />
         <NodeLayout
           Size="193,42"
           Id="Package\SQL Prepare Countries"
-          TopLeft="211,157" />
+          TopLeft="465,226" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="307.5,199">
+          TopLeft="561.5,268">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -612,44 +682,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="191,89">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="85.6666666666667,68"
-              Start="0,0"
-              End="85.6666666666667,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.464542651593" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.464542651593"
-                    Point2="0,40.464542651593"
-                    Point3="4,40.464542651593" />
-                  <mssgle:LineSegment
-                    End="81.6666666666667,40.464542651593" />
-                  <mssgle:CubicBezierSegment
-                    Point1="81.6666666666667,40.464542651593"
-                    Point2="85.6666666666667,40.464542651593"
-                    Point3="85.6666666666667,44.464542651593" />
-                  <mssgle:LineSegment
-                    End="85.6666666666667,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="17.5288802083333,45.464542651593,50.60890625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="377,291.5">
+          TopLeft="631,360.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -681,37 +715,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Notify Operator Task"
-          TopLeft="569,50" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="265,69.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="304,0"
-              Start="0,0"
-              End="296.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="296.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="133.00865234375,5,30.4826953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="338.333333333333,157">
+          TopLeft="592.333333333333,226">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -747,7 +753,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="403.833333333333,249.5">
+          TopLeft="657.833333333333,318.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -783,7 +789,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="507.333333333333,344">
+          TopLeft="761.333333333333,413">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -815,6 +821,103 @@
             <mssgm:EdgeLabel
               BoundingBox="82.0919856770833,-137.897475774614,30.4826953125,9.7490234375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="147,42"
+          Id="Package\For Loop Container\EXP fileName"
+          TopLeft="54,33" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\For Loop Container\FILE Src - Trg"
+          TopLeft="58,136" />
+        <EdgeLayout
+          Id="Package\For Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="129.75,75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61"
+              Start="0,0"
+              End="0,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="151,42"
+          Id="Package\For Loop Container\CMD Open file"
+          TopLeft="54,251" />
+        <EdgeLayout
+          Id="Package\For Loop Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="130.75,178">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73"
+              Start="0,0"
+              End="0,65.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="245,321"
+          Size="245,364"
+          Id="Package\For Loop Container"
+          TopLeft="118,101" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="363,283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102,-36"
+              Start="0,0"
+              End="94.5,-36">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="47,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47,0"
+                    Point2="51,0"
+                    Point3="51,-4" />
+                  <mssgle:LineSegment
+                    End="51,-32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51,-32"
+                    Point2="51,-36"
+                    Point3="55,-36" />
+                  <mssgle:LineSegment
+                    End="94.5,-36" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
