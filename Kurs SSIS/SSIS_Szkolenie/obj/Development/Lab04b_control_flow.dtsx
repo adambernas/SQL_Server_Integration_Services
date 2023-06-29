@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Lab04b_control_flow"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{140E512E-C6A0-458B-8AAC-377C26747F9A}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{D5D15EA7-45BA-4264-A2CC-25C5A1EB64D3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -113,311 +113,6 @@
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\DFT Load Product"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{38A194E1-E8F2-4088-8A2B-8DD2A946A6A3}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="DFT Load Product"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\DFT Load Product\DST Countries"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="DST Countries"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Countries]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT Load Product\DST Countries.Connections[OleDbConnection]"
-                  connectionManagerID="{96E7CF79-5689-471F-9637-7EE8C572E9BE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].Columns[CountryRegionCode]"
-                      cachedDataType="wstr"
-                      cachedLength="2"
-                      cachedName="CountryRegionCode"
-                      externalMetadataColumnId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegionCode]"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[CountryRegionCode]" />
-                    <inputColumn
-                      refId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].Columns[Name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Name"
-                      externalMetadataColumnId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[Name]" />
-                    <inputColumn
-                      refId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="ModifiedDate"
-                      externalMetadataColumnId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[ModifiedDate]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegionCode]"
-                      dataType="wstr"
-                      length="2"
-                      name="CountryRegionCode" />
-                    <externalMetadataColumn
-                      refId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
-                      dataType="wstr"
-                      length="50"
-                      name="Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
-                      dataType="dbTimeStamp"
-                      name="ModifiedDate" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DFT Load Product\DST Countries.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT Load Product\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT Load Product\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT Load Product\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT Load Product\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DFT Load Product\SRC Countries"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1045"
-              name="SRC Countries"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT Load Product\SRC Countries.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[conn_CountriesTrg]"
-                  connectionManagerRefId="Package.ConnectionManagers[conn_CountriesTrg]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[CountryRegionCode]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[CountryRegionCode]"
-                      length="2"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[CountryRegionCode]"
-                      name="CountryRegionCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[Name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[Name]"
-                      length="50"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[Name]"
-                      name="Name"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[ModifiedDate]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
-                      length="50"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].Columns[ModifiedDate]"
-                      name="ModifiedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[CountryRegionCode]"
-                      dataType="wstr"
-                      length="2"
-                      name="CountryRegionCode" />
-                    <externalMetadataColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[Name]"
-                      dataType="wstr"
-                      length="50"
-                      name="Name" />
-                    <externalMetadataColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
-                      dataType="wstr"
-                      length="50"
-                      name="ModifiedDate" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      dataType="nText"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\DFT Load Product.Paths[Flat File Source Output]"
-              endId="Package\DFT Load Product\DST Countries.Inputs[OLE DB Destination Input]"
-              name="Flat File Source Output"
-              startId="Package\DFT Load Product\SRC Countries.Outputs[Flat File Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\FILE Delete file"
       DTS:CreationName="Microsoft.FileSystemTask"
@@ -525,6 +220,350 @@
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{881FB3A4-C0FA-496C-9920-DAC686ED933A}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{3EA979FA-D767-42C4-ACC5-A0152A480BCB}"
+        DTS:ObjectName="{3EA979FA-D767-42C4-ACC5-A0152A480BCB}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[$Project::FolderTrg]+ @[User::FileName]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\CountriesTrg\Countries1.txt" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="-1" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\DFT Countries"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{38A194E1-E8F2-4088-8A2B-8DD2A946A6A3}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT Countries"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\DFT Countries\DST Countries"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="DST Countries"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Countries]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Connections[OleDbConnection]"
+                      connectionManagerID="{96E7CF79-5689-471F-9637-7EE8C572E9BE}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[AW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].Columns[CountryRegionCode]"
+                          cachedDataType="wstr"
+                          cachedLength="2"
+                          cachedName="CountryRegionCode"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegionCode]"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[CountryRegionCode]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[Name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].Columns[ModifiedDate]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="ModifiedDate"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[ModifiedDate]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[CountryRegionCode]"
+                          dataType="wstr"
+                          length="2"
+                          name="CountryRegionCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="50"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input].ExternalColumns[ModifiedDate]"
+                          dataType="dbTimeStamp"
+                          name="ModifiedDate" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\DST Countries.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\DFT Countries\SRC Countries"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1045"
+                  name="SRC Countries"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[conn_CountriesTrg]"
+                      connectionManagerRefId="Package.ConnectionManagers[conn_CountriesTrg]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[CountryRegionCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[CountryRegionCode]"
+                          length="2"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[CountryRegionCode]"
+                          name="CountryRegionCode"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[Name]"
+                          name="Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].Columns[ModifiedDate]"
+                          name="ModifiedDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[CountryRegionCode]"
+                          dataType="wstr"
+                          length="2"
+                          name="CountryRegionCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="50"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output].ExternalColumns[ModifiedDate]"
+                          dataType="wstr"
+                          length="50"
+                          name="ModifiedDate" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          dataType="nText"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\DFT Countries.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\DFT Countries\DST Countries.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\DFT Countries\SRC Countries.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{ABF6045C-11D9-4856-95FA-A35444F2DB1D}"
+          DTS:ObjectName="{ABF6045C-11D9-4856-95FA-A35444F2DB1D}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Notify Operator Task"
       DTS:CreationName="Microsoft.DbMaintenanceNotifyOperatorTask"
       DTS:Description="Notify Operator Task"
@@ -573,11 +612,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{89753BB5-B1A2-41AF-804E-6E7BF0AE463A}"
+      DTS:DTSID="{DA09A7ED-4A03-483A-9233-026892B6CC98}"
       DTS:From="Package\SQL Prepare Countries"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\DFT Load Product" />
+      DTS:To="Package\Foreach Loop Container" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -589,11 +628,19 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{B1A45D12-6A1C-40DA-9666-93AF0B1DEF3F}"
-      DTS:From="Package\DFT Load Product"
+      DTS:DTSID="{F27B3275-D9C4-4B32-826B-BC8EC56826FE}"
+      DTS:From="Package\Foreach Loop Container"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\FILE Delete file" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{C5C4B977-84A2-4079-B138-E26322B7DF5B}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Notify Operator Task"
+      DTS:Value="1" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
@@ -605,8 +652,8 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
-      DTS:DTSID="{EF384FE7-CDC4-4067-942D-A66565910092}"
-      DTS:From="Package\DFT Load Product"
+      DTS:DTSID="{1A403964-2A97-4B5B-BB94-06F5B4A9C18D}"
+      DTS:From="Package\For Loop Container"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\Notify Operator Task"
       DTS:Value="1" />
@@ -630,199 +677,15 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="169,42"
-          Id="Package\DFT Load Product"
-          TopLeft="546.5,318.5" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="154,42"
           Id="Package\FILE Delete file"
-          TopLeft="660,413" />
+          TopLeft="806,470" />
         <NodeLayout
-          Size="180,42"
-          Id="Package\Notify Operator Task"
-          TopLeft="823,119" />
-        <NodeLayout
-          Size="193,42"
-          Id="Package\SQL Prepare Countries"
-          TopLeft="465,226" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="561.5,268">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="69.5,50.5"
-              Start="0,0"
-              End="69.5,43">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.25"
-                    Point2="0,25.25"
-                    Point3="4,25.25" />
-                  <mssgle:LineSegment
-                    End="65.5,25.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="65.5,25.25"
-                    Point2="69.5,25.25"
-                    Point3="69.5,29.25" />
-                  <mssgle:LineSegment
-                    End="69.5,43" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="631,360.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="106,52.5"
-              Start="0,0"
-              End="106,45">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.25"
-                    Point2="0,26.25"
-                    Point3="4,26.25" />
-                  <mssgle:LineSegment
-                    End="102,26.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="102,26.25"
-                    Point2="106,26.25"
-                    Point3="106,30.25" />
-                  <mssgle:LineSegment
-                    End="106,45" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="592.333333333333,226">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="320.666666666667,-65"
-              Start="0,0"
-              End="320.666666666667,-57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-22.3206577595067" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-22.3206577595067"
-                    Point2="0,-26.3206577595067"
-                    Point3="4,-26.3206577595067" />
-                  <mssgle:LineSegment
-                    End="316.666666666667,-26.3206577595067" />
-                  <mssgle:CubicBezierSegment
-                    Point1="316.666666666667,-26.3206577595067"
-                    Point2="320.666666666667,-26.3206577595067"
-                    Point3="320.666666666667,-30.3206577595067" />
-                  <mssgle:LineSegment
-                    End="320.666666666667,-57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="145.091985677083,-21.3206577595067,30.4826953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="657.833333333333,318.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="283.833333333333,-157.5"
-              Start="0,0"
-              End="283.833333333333,-150">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-74.8056751719262" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-74.8056751719262"
-                    Point2="0,-78.8056751719262"
-                    Point3="4,-78.8056751719262" />
-                  <mssgle:LineSegment
-                    End="279.833333333333,-78.8056751719262" />
-                  <mssgle:CubicBezierSegment
-                    Point1="279.833333333333,-78.8056751719262"
-                    Point2="283.833333333333,-78.8056751719262"
-                    Point3="283.833333333333,-82.8056751719262" />
-                  <mssgle:LineSegment
-                    End="283.833333333333,-150" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="126.675319010417,-73.8056751719262,30.4826953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="761.333333333333,413">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="194.666666666667,-252"
-              Start="0,0"
-              End="194.666666666667,-244.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-138.897475774614" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-138.897475774614"
-                    Point2="0,-142.897475774614"
-                    Point3="4,-142.897475774614" />
-                  <mssgle:LineSegment
-                    End="190.666666666667,-142.897475774614" />
-                  <mssgle:CubicBezierSegment
-                    Point1="190.666666666667,-142.897475774614"
-                    Point2="194.666666666667,-142.897475774614"
-                    Point3="194.666666666667,-146.897475774614" />
-                  <mssgle:LineSegment
-                    End="194.666666666667,-244.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="82.0919856770833,-137.897475774614,30.4826953125,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="151,42"
+          Id="Package\For Loop Container\CMD Open file"
+          TopLeft="54,251" />
         <NodeLayout
           Size="147,42"
           Id="Package\For Loop Container\EXP fileName"
@@ -853,10 +716,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="151,42"
-          Id="Package\For Loop Container\CMD Open file"
-          TopLeft="54,251" />
         <EdgeLayout
           Id="Package\For Loop Container.PrecedenceConstraints[Constraint 1]"
           TopLeft="130.75,178">
@@ -882,36 +741,43 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="245,321"
-          Size="245,364"
+          PanelSize="245,348"
+          Size="245,391"
           Id="Package\For Loop Container"
           TopLeft="118,101" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Foreach Loop Container\DFT Countries"
+          TopLeft="21.5,31.1666666666667" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="220,128"
+          Size="220,171"
+          Id="Package\Foreach Loop Container"
+          TopLeft="445.5,432.722222222222" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Notify Operator Task"
+          TopLeft="823,119" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\SQL Prepare Countries"
+          TopLeft="485,238" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="363,283">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="577.833333333333,280">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="102,-36"
+              EndConnector="0,152.722222222222"
               Start="0,0"
-              End="94.5,-36">
+              End="0,145.222222222222">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="47,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47,0"
-                    Point2="51,0"
-                    Point3="51,-4" />
-                  <mssgle:LineSegment
-                    End="51,-32" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51,-32"
-                    Point2="51,-36"
-                    Point3="55,-36" />
-                  <mssgle:LineSegment
-                    End="94.5,-36" />
+                    End="0,145.222222222222" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -920,24 +786,236 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="363,342.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122,-83.3333333333333"
+              Start="0,0"
+              End="114.5,-83.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45.1203501094092,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.1203501094092,0"
+                    Point2="49.1203501094092,0"
+                    Point3="49.1203501094092,-4" />
+                  <mssgle:LineSegment
+                    End="49.1203501094092,-79.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.1203501094092,-79.3333333333333"
+                    Point2="49.1203501094092,-83.3333333333333"
+                    Point3="53.1203501094092,-83.3333333333333" />
+                  <mssgle:LineSegment
+                    End="114.5,-83.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="665.5,518.222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140.5,-27.2222222222223"
+              Start="0,0"
+              End="133,-27.2222222222223">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="66.25,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.25,0"
+                    Point2="70.25,0"
+                    Point3="70.25,-4" />
+                  <mssgle:LineSegment
+                    End="70.25,-23.2222222222223" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70.25,-23.2222222222223"
+                    Point2="70.25,-27.2222222222223"
+                    Point3="74.25,-27.2222222222223" />
+                  <mssgle:LineSegment
+                    End="133,-27.2222222222223" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="590.833333333333,432.722222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="279.166666666667,-271.722222222222"
+              Start="0,0"
+              End="279.166666666667,-264.222222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-149.572189514999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-149.572189514999"
+                    Point2="0,-153.572189514999"
+                    Point3="4,-153.572189514999" />
+                  <mssgle:LineSegment
+                    End="275.166666666667,-153.572189514999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="275.166666666667,-153.572189514999"
+                    Point2="279.166666666667,-153.572189514999"
+                    Point3="279.166666666667,-157.572189514999" />
+                  <mssgle:LineSegment
+                    End="279.166666666667,-264.222222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="124.341985677083,-148.572189514999,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="581.5,238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="331.5,-77"
+              Start="0,0"
+              End="331.5,-69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-34.5"
+                    Point2="0,-38.5"
+                    Point3="4,-38.5" />
+                  <mssgle:LineSegment
+                    End="327.5,-38.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="327.5,-38.5"
+                    Point2="331.5,-38.5"
+                    Point3="331.5,-42.5" />
+                  <mssgle:LineSegment
+                    End="331.5,-69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="150.50865234375,-33.5,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="363,223.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="460,-83.6666666666667"
+              Start="0,0"
+              End="452.5,-83.6666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="181.207877461707,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="181.207877461707,0"
+                    Point2="185.207877461707,0"
+                    Point3="185.207877461707,-4" />
+                  <mssgle:LineSegment
+                    End="185.207877461707,-79.6666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="185.207877461707,-79.6666666666667"
+                    Point2="185.207877461707,-83.6666666666667"
+                    Point3="189.207877461707,-83.6666666666667" />
+                  <mssgle:LineSegment
+                    End="452.5,-83.6666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="169.966529805457,1,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="883,470">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,-309"
+              Start="0,0"
+              End="73,-301.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-198.992700729927" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-198.992700729927"
+                    Point2="0,-202.992700729927"
+                    Point3="4,-202.992700729927" />
+                  <mssgle:LineSegment
+                    End="69,-202.992700729927" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69,-202.992700729927"
+                    Point2="73,-202.992700729927"
+                    Point3="73,-206.992700729927" />
+                  <mssgle:LineSegment
+                    End="73,-301.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="21.25865234375,-197.992700729927,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\DFT Load Product">
+    design-time-name="Package\Foreach Loop Container\DFT Countries">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="152,42"
-          Id="Package\DFT Load Product\SRC Countries"
+          Id="Package\Foreach Loop Container\DFT Countries\SRC Countries"
           TopLeft="319,235" />
         <NodeLayout
           Size="151,42"
-          Id="Package\DFT Load Product\DST Countries"
+          Id="Package\Foreach Loop Container\DFT Countries\DST Countries"
           TopLeft="323,364" />
         <EdgeLayout
-          Id="Package\DFT Load Product.Paths[Flat File Source Output]"
+          Id="Package\Foreach Loop Container\DFT Countries.Paths[Flat File Source Output]"
           TopLeft="396.75,277">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -955,16 +1033,14 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT Load Product\DST Countries">
+    design-time-name="Package\Foreach Loop Container\DFT Countries\DST Countries">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

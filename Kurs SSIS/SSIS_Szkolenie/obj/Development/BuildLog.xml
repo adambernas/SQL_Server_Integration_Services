@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>SSIS_Szkolenie</Name>
-    <LastWriteTime>2023-06-27T19:41:44.9328664Z</LastWriteTime>
+    <LastWriteTime>2023-06-29T20:44:45.7960763Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -48,7 +48,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Lab04b_control_flow.dtsx</Name>
-      <LastWriteTime>2023-06-28T19:47:42.1188826Z</LastWriteTime>
+      <LastWriteTime>2023-06-29T20:44:45.758523Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
