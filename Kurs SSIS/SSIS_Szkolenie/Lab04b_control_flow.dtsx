@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Lab04b_control_flow"
   DTS:PackageType="5"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{D8A6FABE-6A64-4090-B5A4-E1F02DF38F04}">
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{16D2D216-6973-4CA1-B75E-A607B99A7E35}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -232,11 +232,11 @@
         DTS:DTSID="{3EA979FA-D767-42C4-ACC5-A0152A480BCB}"
         DTS:ObjectName="{3EA979FA-D767-42C4-ACC5-A0152A480BCB}">
         <DTS:PropertyExpression
-          DTS:Name="Directory">@[$Project::FolderTrg]+ @[User::FileName]</DTS:PropertyExpression>
+          DTS:Name="Directory">@[$Project::FolderTrg]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\CountriesTrg\Countries1.txt" />
+              Folder="C:\Users\ja\Desktop\Kurs SSIS GIT\Pliki\CountriesTrg\" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -557,8 +557,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{ABF6045C-11D9-4856-95FA-A35444F2DB1D}"
-          DTS:ObjectName="{ABF6045C-11D9-4856-95FA-A35444F2DB1D}"
+          DTS:DTSID="{4A22F110-D882-4694-A4FF-53B9D34E32F0}"
+          DTS:ObjectName="{4A22F110-D882-4694-A4FF-53B9D34E32F0}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::FileName" />
       </DTS:ForEachVariableMappings>
@@ -741,7 +741,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="162,306"
+          PanelSize="162,307"
           Size="162,350"
           Id="Package\For Loop Container"
           TopLeft="118,101" />
@@ -752,7 +752,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="161,102"
+          PanelSize="161,103"
           Size="161,146"
           Id="Package\Foreach Loop Container"
           TopLeft="504.5,400.722222222222" />
@@ -1005,7 +1005,7 @@
     design-time-name="Package\Foreach Loop Container\DFT Countries">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,42"
           Id="Package\Foreach Loop Container\DFT Countries\SRC Countries"
@@ -1033,7 +1033,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
