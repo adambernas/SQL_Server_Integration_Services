@@ -38,4 +38,6 @@ Odbyty plan szkolenia:
 
    -Pętla Foreach
 
+   -Debugowanie – Breakpoints
+
 Learning in progress...
