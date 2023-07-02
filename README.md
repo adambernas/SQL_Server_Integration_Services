@@ -36,4 +36,6 @@ Odbyty plan szkolenia:
 
    -Pętla For
 
+   -Pętla Foreach
+
 Learning in progress...
