@@ -40,4 +40,8 @@ Odbyty plan szkolenia:
 
    -Debugowanie – Breakpoints
 
+5) Zadania zaawansowane
+
+   -Execute SQL Task
+
 Learning in progress...

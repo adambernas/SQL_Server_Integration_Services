@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>SSIS_Szkolenie</Name>
-    <LastWriteTime>2023-07-02T17:00:38.0630408Z</LastWriteTime>
+    <LastWriteTime>2023-07-03T19:12:10.9714565Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -54,6 +54,11 @@
     <ProjectBuildItemInfo>
       <Name>Lab04g_breakpoints.dtsx</Name>
       <LastWriteTime>2023-07-02T17:20:48.0517569Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Lab05b_sql_task.dtsx</Name>
+      <LastWriteTime>2023-07-03T19:12:10.9519382Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
