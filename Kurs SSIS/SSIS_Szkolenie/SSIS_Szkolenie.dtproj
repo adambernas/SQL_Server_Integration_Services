@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAD/CSm1sojGjdWNVVoMkB5/M/0rJLBo+wxk32X1mlxZTgAAAAAOgAAAAAIAACAAAAAjr4TIX7HmI+Ra0eIKtbmMhrckENq9QzSfNBaCEgd+rJAAAABJxLeXd6VKsQnn4LlFeLL0JmZv+KFCOta/5Gq/CJ91yRd/BXmTtq+8xj5qi294wpnoc8/k/cl0Glj/IjWrevMWyyaYYp30XZDtYiUSaHqpqi0daasDI1aMXR37ZhIr9N7rgqsqr0fkFHHWC0gAAS6JHV1qjwu3xIYjaE3g9P8FTuyuZSiFFbkciPMZM1NphMpAAAAAi9aH16HezxpyyvjMHoBqO9l55tNNVApHGpmIY44VJ2aEHHuP28faGBEfVNXBxqg7N9WnZsr0GP7Mczi5CwaGow==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAC/YAPQuIgqKCH3GzVvnPw3dKWKITVOo30tGS0p1epg8QAAAAAOgAAAAAIAACAAAAAoE71n0iYTUUT/ALcXoX1iWNYidwiKu7KHVUVwowPsV5AAAAB7tIk6Adx5nOz0P4bv/Dd9BTWEf7QZXh7ufx7uPffPqoWzMloDu8u7NYbvdgl6FB5KxLo2CeTrFb/O4boo8Blm6k7YjYe35E+JiJqgbnDZ/9zkwDrV/StLcKoydPeC8SjuC7oDJiLFL8jXNOhpCjIP/b33C3RGVB6jeRSHxtISxVnXOu2T45T+cfAuU6EHRnpAAAAAhH0R8w6iTye3YwF4iC04o1d+2asxexi49c/MI6NeI17OZANgwTvBdX0A+XphCeUNVQ5zj5lk+dviVPD7B8nB+Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -41,6 +41,7 @@
           <SSIS:Package SSIS:Name="Lab04b_control_flow.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab04g_breakpoints.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab05b_sql_task.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab05c_bulk.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -3166,6 +3167,54 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">Components</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab05c_bulk.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{7C9C491D-9E6D-4308-A858-50C8438D2917}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab05c_bulk</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{956F90C8-A596-4695-8BBB-A6AF6D05F323}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="CM.File.bcp.ConnectByProxy">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.File.bcp.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\ja\Desktop\Kurs_SSIS_GIT\Pliki\bcp_out\Sales.bcp</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
