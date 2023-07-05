@@ -44,4 +44,6 @@ Odbyty plan szkolenia:
 
    -Execute SQL Task
 
+   -Bcp i Bulk Insert Task
+
 Learning in progress...
