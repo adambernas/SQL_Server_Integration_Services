@@ -42,8 +42,10 @@ Odbyty plan szkolenia:
 
 5) Zadania zaawansowane
 
-   -Execute SQL Task
+   -Execute SQL Task, Script Task
 
-   -Bcp i Bulk Insert Task
+   -Bcp i Bulk Insert Task, Execute Process Task -> CMD
+
+   -Rebuild Index Task, Update Statistics Task, Back Up Database Task, Maintenance Cleanup Task
 
 Learning in progress...
