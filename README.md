@@ -48,4 +48,8 @@ Odbyty plan szkolenia:
 
    -Rebuild Index Task, Update Statistics Task, Back Up Database Task, Maintenance Cleanup Task
 
+6) Zaawansowane transformacje
+
+   -Fuzzy Lookup
+
 Learning in progress...

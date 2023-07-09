@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAA+b9bdPnvMvXCY5bhWPYIc1PL3jg8YF2kFtig8/dMUnAAAAAAOgAAAAAIAACAAAAAzH+hPq9h9KNty+0N76DL92uQpiGh11J+RvblenxzerZAAAAAab8QBuN/D2UD/qcqJoDK1aGqDDjLG1UYpkGRpZ/InlWyXxtPEI/lmjzrWYnAoQ38HsiSR90PsaXhyWCxZiItw1aoY5yxrVuoseo0SPXTjRL2GhY0wL/UtSjY5pqv+GxH380bke5IWUngQB/JqKCt4OB6L6nL3QY5ftcOJSSp7gsGPT/RwLeQOoZLTPiCQ40hAAAAAq1smMgvQhuNpSbmosw7lXKsA6aChtZy3cubbqBauTputxYlofzfL6/YBvRgfMluX2v1LEdA8IWTm5i/RsuqEaA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAACjTR3tN0YM1kzgDYje2GrNkpT5npG5zr2KaZ2Nhjn+fgAAAAAOgAAAAAIAACAAAACJasAYmJzkWDGFRIhiWvkjvoxUvo3u7biqAfsmHnFbX5AAAACIwDvDEC8I5qX/bKuLvbtD7XIHN84G9RICbrH5HAdUeydYK0madz8FZ9w5XcAXtnILDv4E4RHVbvFgv6Vc0xlNNQqDae9U1pSUU7JKrbNFoDoBRMCNWB6kgujYlv540hrCvoN5f5OnpGut6vE0E6V3IoqvjbiIzvDTpiYQfmnVa70Sz9GohwuUpFn76VUoE3xAAAAA8CUTVUuXzqlnjUnsjuvt+Yj5XtG/G2naoubJejwx8Vi2NLNJw5p1R6+pmBUnRmRUTdR7Td/KkcjAJ8PJ5SV2+w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -43,6 +43,7 @@
           <SSIS:Package SSIS:Name="Lab05b_sql_task.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab05c_bulk.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab05d_maintenance_plan.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab06b_fuzzy_lookup.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -3354,6 +3355,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab06b_fuzzy_lookup.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{184ED916-E5C7-4DD0-9365-1D959310537F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab06b_fuzzy_lookup</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{56680252-7302-4FF6-ABEC-74C20B2480BD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
