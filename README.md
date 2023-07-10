@@ -52,4 +52,6 @@ Odbyty plan szkolenia:
 
    -Fuzzy Lookup
 
+   -Merge Join
+
 Learning in progress...

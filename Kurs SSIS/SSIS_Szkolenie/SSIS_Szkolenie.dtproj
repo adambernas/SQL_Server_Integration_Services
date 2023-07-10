@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAACjTR3tN0YM1kzgDYje2GrNkpT5npG5zr2KaZ2Nhjn+fgAAAAAOgAAAAAIAACAAAACJasAYmJzkWDGFRIhiWvkjvoxUvo3u7biqAfsmHnFbX5AAAACIwDvDEC8I5qX/bKuLvbtD7XIHN84G9RICbrH5HAdUeydYK0madz8FZ9w5XcAXtnILDv4E4RHVbvFgv6Vc0xlNNQqDae9U1pSUU7JKrbNFoDoBRMCNWB6kgujYlv540hrCvoN5f5OnpGut6vE0E6V3IoqvjbiIzvDTpiYQfmnVa70Sz9GohwuUpFn76VUoE3xAAAAA8CUTVUuXzqlnjUnsjuvt+Yj5XtG/G2naoubJejwx8Vi2NLNJw5p1R6+pmBUnRmRUTdR7Td/KkcjAJ8PJ5SV2+w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAABNppvtX+6fDYtR3tlsB1jANzAUm6S9iS/WPIYqUAM1igAAAAAOgAAAAAIAACAAAABIGB73Sw7HFCF/kpdzKFYLPLkZGiRkM8uMygC3LUywNpAAAAB7zeTYixxBrv1OmcxU85wTzKaTw6dqSRd8zirMMrNEa6AZMBlskAoQftGlhV8swh1YXgnc2PPuANpQGcnXwfCSJ1O6WOAEFbDYO6X/ZYo3nZ4+zK3cXLP8sAlvMGPwfxTMGDtCWv+jbFskqIf7c/w3MBB2Eo14F2TxlU/wvDPN6U2VUNRBCkax6deb0qPXojhAAAAAmXwxmfKOohVQ4GZzCQsmRd/VnIzHMgJtQSpwBQ2hKzI46S9lZrurNz+pmNllan8Hxx4o1HdVj5SiJZ0F4tDcQQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -44,6 +44,7 @@
           <SSIS:Package SSIS:Name="Lab05c_bulk.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab05d_maintenance_plan.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06b_fuzzy_lookup.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab06c_merge_join.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -3372,6 +3373,38 @@
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab06c_merge_join.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{05E0DE81-5A15-4C6F-9E3D-90A6970E9A65}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab06c_merge_join</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{06B91F46-1773-4AFE-8DB7-FE9858F195B2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="Gender">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{57D5AC9C-06F4-4F79-984C-7F62B02D2A5D}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">F</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
