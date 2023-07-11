@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAABNppvtX+6fDYtR3tlsB1jANzAUm6S9iS/WPIYqUAM1igAAAAAOgAAAAAIAACAAAABIGB73Sw7HFCF/kpdzKFYLPLkZGiRkM8uMygC3LUywNpAAAAB7zeTYixxBrv1OmcxU85wTzKaTw6dqSRd8zirMMrNEa6AZMBlskAoQftGlhV8swh1YXgnc2PPuANpQGcnXwfCSJ1O6WOAEFbDYO6X/ZYo3nZ4+zK3cXLP8sAlvMGPwfxTMGDtCWv+jbFskqIf7c/w3MBB2Eo14F2TxlU/wvDPN6U2VUNRBCkax6deb0qPXojhAAAAAmXwxmfKOohVQ4GZzCQsmRd/VnIzHMgJtQSpwBQ2hKzI46S9lZrurNz+pmNllan8Hxx4o1HdVj5SiJZ0F4tDcQQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAC1yRc4zE5n4mfvfnMfo0pp3oe45LZ7IxHXukyhHGzH3AAAAAAOgAAAAAIAACAAAADj2G5PQO6Dylbs+pXCohKwzelTANLj31uY8dJhc2s4KpAAAACGloEox+WtYEx0dIad/KDrKRbT1DaROIaRopD50fNlHXNt0N02NcQN8gDM7gzgfzKAm0qPrm3o5QoOh5oOElIC8HReWZgl8wndaP4pSh4wYyKW9xyjKCg3o0Xt/U7HjBwsYuCgbN05pl0YXf1KW9jN8tlWYemUgLFNr0T5R9ml8iA48n1wvHVXFEc+5U2Wkm9AAAAAwkizL/2Tp6M0FGiW/op+X+Nkz+ywVio2FVTRon1c7ndK5MVt7hgldFSMVs76Wq+p5WKZW5upgxFBOzXUMdQqQg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -45,6 +45,7 @@
           <SSIS:Package SSIS:Name="Lab05d_maintenance_plan.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06b_fuzzy_lookup.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06c_merge_join.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab06d_union_all.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -3405,6 +3406,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab06d_union_all.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{10A90F11-B1E5-4100-A7D5-F7BECCF1CFA8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab06d_union_all</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{8323646F-8BD9-4201-B8A4-2954825D91BB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

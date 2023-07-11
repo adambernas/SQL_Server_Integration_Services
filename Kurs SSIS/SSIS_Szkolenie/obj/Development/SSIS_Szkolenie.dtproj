@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAACplGeJFDhpuNZ1un/egWazw9JqWHb3DY/RDOtPjyE1ewAAAAAOgAAAAAIAACAAAABTyMU8GWvhkibSA27N34Mwo8Jp8uxAlqCpOJ3fQLysvZAAAACFqvZXYQMLdyRZXGgas1yRTXhVerQeM38oB4ECtCS3Lzgf6bpKSOf6lQMpxl4vZSWCprz36VN9dkvfUq0L7wFW5eoAKo/2IOXsWSUV3M7hKP0dXndcD/2hVsZrFZg8ep0YCvpgTH/0dBFdHIGOqBw0GQWUdutHUMTZ3Ls29Vmo5ya4ggrAwccGgQkbkKaaiChAAAAAvDISjVJ5gDvtCZ1T8PEn6p8SqctHQrAHCVvVQZ2eowrkDEib5XJ+2C++QbzIDiwFsU7DTbiDMm2fgHLorUfL+A==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAADnwGeqyXv6URJ99REgmXSuvyG+aNpVgjdihA2PwxDVwAAAAAOgAAAAAIAACAAAACklkxyljsnRj5Z31jRnYj/l1hpyYrEjqfvqKfDC5PfiZAAAACeVva/85xGzRcAy1LN/87g0wF//O1nqymLqtAzWWGPblg+Ah1rKGZ9wdMiO8qCCukcvYiSUK5se5B8FPyFQ1iotLx7CfriPcEZK3NAk2o/UDUIxNN2R6FUg6xx3BOxnU9WUgqNV/USihjMEV2wKkBYH5rUXg4lwv2a8AS9zZnjmiafufNS0r6ESQVLdKLEQelAAAAAOxv/E99vmnrdJyECOyAbfFsyQBx/Ezu2wB+HD24ARHi7GArkmpi8fo1KlBUjJq69wN5Gx+FEfe9DJSYFxseyRw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -45,6 +45,7 @@
           <SSIS:Package SSIS:Name="Lab05d_maintenance_plan.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06b_fuzzy_lookup.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06c_merge_join.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab06d_union_all.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -3380,10 +3381,10 @@
                 <SSIS:Property SSIS:Name="Name">Lab06c_merge_join</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">16</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C403AF4F-7E5E-4FE7-8BDF-09BCCD78F098}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{06B91F46-1773-4AFE-8DB7-FE9858F195B2}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3405,6 +3406,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab06d_union_all.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{10A90F11-B1E5-4100-A7D5-F7BECCF1CFA8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab06d_union_all</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EF2443CF-A349-472D-B035-EBE9213A7D7D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>

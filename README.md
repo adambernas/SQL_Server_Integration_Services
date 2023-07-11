@@ -54,4 +54,6 @@ Odbyty plan szkolenia:
 
    -Merge Join
 
+   -Union All, Row Count
+
 Learning in progress...

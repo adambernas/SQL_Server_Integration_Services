@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>SSIS_Szkolenie</Name>
-    <LastWriteTime>2023-07-10T16:57:56.7547516Z</LastWriteTime>
+    <LastWriteTime>2023-07-11T17:05:37.8948886Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -79,6 +79,11 @@
     <ProjectBuildItemInfo>
       <Name>Lab06c_merge_join.dtsx</Name>
       <LastWriteTime>2023-07-10T17:00:37.9572919Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Lab06d_union_all.dtsx</Name>
+      <LastWriteTime>2023-07-11T17:23:57.6094924Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
