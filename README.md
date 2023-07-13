@@ -58,4 +58,6 @@ Odbyty plan szkolenia:
 
    -Merge
 
+   -OLE DB Command, Derived Column
+
 Learning in progress...

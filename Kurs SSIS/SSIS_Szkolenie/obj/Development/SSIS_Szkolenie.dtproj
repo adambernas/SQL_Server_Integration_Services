@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAB7+wiNp+9FhICQIZKNNYWR5DWM6F8a3ahGkUZdDLsSEQAAAAAOgAAAAAIAACAAAAC7sGXDTB/7FDEUvTU6BMAnLKkq4vW4Qh/vHAuuxyD+15AAAABgzB/9KvqEpFW4ZFwmvMX4lyxs0leapeIM4m/1Z8T7zkAqeJn2mOafWs9qfbqB0esLf/LbtSsbVrJrZPgu0SCfP+jgzUBkwNkBZAqjcoAeT6e3fRgezKmQ/QXqEHAbsMypDajnZ7EBLyZwaJbjBRjLvl3RfghazTSQd8a3gWRTLYl1HJSC4+AxRw/Z3Yjk0iFAAAAAamZA89soDr3+uIR/JA1SyHiFM3c+a0jjNl0oQkQHHhfD0MR6idiSmrbZjeyX8iliKR2ntdamcfScw1dcr4AS4g==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAABubmK3XblD+TyyayP+lyfVWmy77fCoeIEbzDh6wl0fMQAAAAAOgAAAAAIAACAAAADnamGiO8TPShFR/VeUONiB0L1DVKfDkg9ma8QXSXdDUJAAAADFJQl+8m0gwHngy/+3PCDnRLxIsfNEkkCEOKdd5aSo9I2LvPnjCp0zBY9oZYU5Zu89MnmY+Ov/gKQ1BcitLpZX6FzqZoIUMZ+Ugmfx6YW8E69wpXG/CU72LZiLv7fkufWoka7SmGKOVkQT0noO8oFQ3Djj+k28Rib3hbage2YGmPOZAXIWX71wkuSqExFuwmdAAAAAHtqoqtY8ppRMC89yOjzeJVz52sfYVDAfDFhjnm9JUgcgSjMW6c2HEqcNAr1BW0XPDMByrfSoIMYB8Tag3ssMEg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -47,6 +47,7 @@
           <SSIS:Package SSIS:Name="Lab06c_merge_join.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06d_union_all.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06e_merge.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab06f_cmd.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -3414,10 +3415,10 @@
                 <SSIS:Property SSIS:Name="Name">Lab06d_union_all</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EF2443CF-A349-472D-B035-EBE9213A7D7D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{8323646F-8BD9-4201-B8A4-2954825D91BB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3431,10 +3432,27 @@
                 <SSIS:Property SSIS:Name="Name">Lab06e_merge</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">16</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{F2317547-F292-4DE1-9ED8-86464FE10C71}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{1495F6D8-8103-4290-8247-2E4598D93004}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab06f_cmd.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F920D6B9-80A8-4323-B7B4-214050C8F363}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab06f_cmd</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{92AF3BFB-44C3-47CA-ADD5-E9C6EA6FC4CC}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
