@@ -60,4 +60,6 @@ Odbyty plan szkolenia:
 
    -OLE DB Command, Derived Column
 
+   -Export Column
+
 Learning in progress...
