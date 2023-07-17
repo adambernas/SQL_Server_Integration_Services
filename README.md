@@ -62,4 +62,8 @@ Odbyty plan szkolenia:
 
    -Export Column
 
+7) Script Component
+
+   -Źródło
+
 Learning in progress...

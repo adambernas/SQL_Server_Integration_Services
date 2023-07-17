@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAACKCiekMfik8dhsdnk8feO2J3XjaU68ifhEiLAMhpt0GQAAAAAOgAAAAAIAACAAAADzGXHQvf5Al2H0NZCyaKlPezAH7nDy0ylIF7pfoDulX5AAAACke6ZdTWXK4dBD5i5BsfbEU3SN8srtG1EoksawHNIVpUWoPQoYEuPxfgunyNySG3MpAvtBAn5QhUH1v/DbAdhEc3JVEbd/QAKISWOrGAe/hwJgwKXVA2nS+Xn/NBhlNrKJajmPLz2S7tky5lRnlayHHoIbQqyw+q1grSYYO/PezHSV2xX9JIDIRokFjfyX/h5AAAAAyotym4utOTxxVee7ph8cAb7HP8eMeudBAMIeQdE1yAf7Qrqa0FVqLWy8ZRkIoCdkWL9uNZIMjbDRGlfJxu4qgQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAADDDQd2aGWBdD0FwRtIOpCUJtiksMNKxXU8cSrt5dTQjAAAAAAOgAAAAAIAACAAAAA1IxWcB3bu8M2woQgQv8oZnWEt9AtoNzyh2U9omshgVJAAAACdggs3FOvfdRucpwIHYwXA3BqjiuVvSpa08/51Zw4OFju/9S1rGB+HuqvJiwhFRyPNYdawRhcIHlsw8o2i9ToENiWcXAd5LYdv6Zkk04a/D5dWUvpJIYd0gDk60mAKmWCZEY5rmQLcNyZgKhuK3cbWGhn8gX29ZwD8ISuxhBgeJ+YZ4CQgw7ExdiizSoTDw8FAAAAAyy612NaAJ169z5mFAiiS/S3oa3GhpjGKOcjbJvCSgFMd6Gjjf0GT/dx05s30BQfMAKH+tHfrSaFdvBxDmm6SmA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -49,6 +49,7 @@
           <SSIS:Package SSIS:Name="Lab06e_merge.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06f_cmd.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab06g_export_column.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab07b_script_component.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -3492,6 +3493,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab07b_script_component.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{8E3255D5-1888-4EFE-BFF5-D71CB547F419}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab07b_script_component</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7EA59865-ACC4-4F45-AE88-2D9BE811BAA2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
