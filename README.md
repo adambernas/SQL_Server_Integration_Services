@@ -66,4 +66,6 @@ Odbyty plan szkolenia:
 
    -Źródło
 
+   -Transformacja
+
 Learning in progress...
