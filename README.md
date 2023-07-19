@@ -68,4 +68,6 @@ Odbyty plan szkolenia:
 
    -Transformacja
 
+   -Miejsce docelowe
+
 Learning in progress...

@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>SSIS_Szkolenie</Name>
-    <LastWriteTime>2023-07-17T17:37:32.5861931Z</LastWriteTime>
+    <LastWriteTime>2023-07-18T17:46:24.2357708Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -103,7 +103,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Lab07b_script_component.dtsx</Name>
-      <LastWriteTime>2023-07-17T18:22:25.2545143Z</LastWriteTime>
+      <LastWriteTime>2023-07-18T17:46:58.5293822Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

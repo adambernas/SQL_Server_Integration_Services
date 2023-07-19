@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAADDDQd2aGWBdD0FwRtIOpCUJtiksMNKxXU8cSrt5dTQjAAAAAAOgAAAAAIAACAAAAA1IxWcB3bu8M2woQgQv8oZnWEt9AtoNzyh2U9omshgVJAAAACdggs3FOvfdRucpwIHYwXA3BqjiuVvSpa08/51Zw4OFju/9S1rGB+HuqvJiwhFRyPNYdawRhcIHlsw8o2i9ToENiWcXAd5LYdv6Zkk04a/D5dWUvpJIYd0gDk60mAKmWCZEY5rmQLcNyZgKhuK3cbWGhn8gX29ZwD8ISuxhBgeJ+YZ4CQgw7ExdiizSoTDw8FAAAAAyy612NaAJ169z5mFAiiS/S3oa3GhpjGKOcjbJvCSgFMd6Gjjf0GT/dx05s30BQfMAKH+tHfrSaFdvBxDmm6SmA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAAiadLpW4A9xLSSlLMImBHzaHH5VtlCYXlEQHWwe5a2bAAAAAAOgAAAAAIAACAAAAAbqSVtoidt/6F+82ssu4G26tvlBSx6YrvppIGy7sO2iJAAAAC0eJtDP5P31bU5TDnOY6FYNp6XGsTKndtQ/N6P0H8Vzw9ld84OO2a3lZ+k6BtEnwcnXgB2XUKXS9fCVvab+VXtH2UyEZnONCNBESY/9jFc2WFBZi8LcrOQjqM6qNXEF7e5m4ZQ+Qa5HJR1+qhtxg4wQvwG883PKLGJ/sxpP6uxZkDaVyAbqYDV6OB8gReDAetAAAAAIZSfN20Hb6BWxpD4ab78OG2Ag0XigFxnX9h0vZlWetf/9yEUZ1kYO1aDBeaPrSuC4ZPFOyMc8mf/Z7NKbxidUg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -3500,16 +3500,47 @@
                 <SSIS:Property SSIS:Name="Name">Lab07b_script_component</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{7EA59865-ACC4-4F45-AE88-2D9BE811BAA2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5A9E739C-3A34-4B68-AAB7-BF756A994DCB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
-              <SSIS:Parameters />
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="CM.CountriesXML.xml.ConnectByProxy">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.CountriesXML.xml.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\ja\Desktop\Kurs_SSIS_GIT\Pliki\CountriesXML.xml</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
