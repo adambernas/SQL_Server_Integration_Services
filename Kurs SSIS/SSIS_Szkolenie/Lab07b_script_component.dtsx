@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Lab07b_script_component"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{18EBA157-A076-4709-B8C7-3D3EEB428AF9}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{64EAAFD4-E817-4D0D-9278-FDC06BC72C84}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4379,13 +4379,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Id="Package\DFT ScripComponent TRAN"
           TopLeft="430,180" />
         <NodeLayout
-          Size="214,42"
-          Id="Package\DFT ScriptComponent SRC"
-          TopLeft="179,85" />
-        <NodeLayout
           Size="213,42"
           Id="Package\DFT ScriptComponent DST"
           TopLeft="303,363" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\DFT ScriptComponent SRC"
+          TopLeft="179,85" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4513,9 +4513,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4534,58 +4532,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DFT ScriptComponent SRC">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="167,42"
-          Id="Package\DFT ScriptComponent SRC\Script Component"
-          TopLeft="248,163" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\DFT ScriptComponent SRC\Multicast"
-          TopLeft="361,339" />
-        <EdgeLayout
-          Id="Package\DFT ScriptComponent SRC.Paths[Cities]"
-          TopLeft="331.5,205">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="91,134"
-              Start="0,0"
-              End="91,126.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,63" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,63"
-                    Point2="0,67"
-                    Point3="4,67" />
-                  <mssgle:LineSegment
-                    End="87,67" />
-                  <mssgle:CubicBezierSegment
-                    Point1="87,67"
-                    Point2="91,67"
-                    Point3="91,71" />
-                  <mssgle:LineSegment
-                    End="91,126.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="37.5,72,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <TaskHost
     design-time-name="Package\DFT ScriptComponent DST">
     <LayoutInfo>
@@ -4632,6 +4578,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="6.75,69.5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\DFT ScriptComponent SRC">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\DFT ScriptComponent SRC\Script Component"
+          TopLeft="248,163" />
+        <NodeLayout
+          Size="123,42"
+          Id="Package\DFT ScriptComponent SRC\Multicast"
+          TopLeft="361,339" />
+        <EdgeLayout
+          Id="Package\DFT ScriptComponent SRC.Paths[Cities]"
+          TopLeft="331.5,205">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91,134"
+              Start="0,0"
+              End="91,126.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,63"
+                    Point2="0,67"
+                    Point3="4,67" />
+                  <mssgle:LineSegment
+                    End="87,67" />
+                  <mssgle:CubicBezierSegment
+                    Point1="87,67"
+                    Point2="91,67"
+                    Point3="91,71" />
+                  <mssgle:LineSegment
+                    End="91,126.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="37.5,72,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

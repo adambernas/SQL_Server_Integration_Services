@@ -70,4 +70,6 @@ Odbyty plan szkolenia:
 
    -Miejsce docelowe
 
+   -Error Output
+
 Learning in progress...
