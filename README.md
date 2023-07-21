@@ -72,4 +72,9 @@ Odbyty plan szkolenia:
 
    -Error Output
 
+8) Deployment
+
+   -Wdrażanie i uruchamianie pakietów
+
+
 Learning in progress...
