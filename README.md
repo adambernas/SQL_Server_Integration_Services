@@ -76,5 +76,6 @@ Odbyty plan szkolenia:
 
    -Wdrażanie i uruchamianie pakietów
 
+   -Środowiska i wersjonowanie
 
 Learning in progress...

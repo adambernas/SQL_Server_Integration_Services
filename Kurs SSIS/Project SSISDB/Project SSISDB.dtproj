@@ -24,8 +24,7 @@
           <SSIS:Property SSIS:Name="CreationDate">2016-11-03T23:21:10.8887094+01:00</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorName">DELL-LAPTOP\tomas</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorComputerName">DELL-LAPTOP</SSIS:Property>
-          <SSIS:Property SSIS:Name="Description">
-          </SSIS:Property>
+          <SSIS:Property SSIS:Name="Description">Poprawiona wersja</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -41,10 +40,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">40</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{8CE1B319-0F0E-4338-9C34-AFE3685458E6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{84B6896F-3FCA-4889-8925-9CD55C94E7CD}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
