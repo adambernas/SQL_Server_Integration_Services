@@ -78,6 +78,8 @@ Odbyty plan szkolenia:
 
    -Środowiska i wersjonowanie
 
-   -Planowanie wykonywanie pakietów
+   -Planowanie wykonywania pakietów
+
+   -Poziomy logowania pakietu
 
 Learning in progress...
