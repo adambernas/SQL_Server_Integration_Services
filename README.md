@@ -82,4 +82,6 @@ Odbyty plan szkolenia:
 
    -Poziomy logowania pakietu
 
+   -Rozwiązywanie problemów z bazą SSISDB
+
 Learning in progress...
