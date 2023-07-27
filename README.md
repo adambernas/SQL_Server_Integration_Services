@@ -84,4 +84,8 @@ Odbyty plan szkolenia:
 
    -Rozwiązywanie problemów z bazą SSISDB
 
+9) PowerQuery
+
+   -Pobieranie danych
+
 Learning in progress...
