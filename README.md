@@ -88,4 +88,6 @@ Odbyty plan szkolenia:
 
    -Pobieranie danych
 
+   -Transformacje
+
 Learning in progress...
