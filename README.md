@@ -90,4 +90,14 @@ Odbyty plan szkolenia:
 
    -Transformacje
 
+   -Łączenie zapytań
+
+10) Śledzenie zmian w bazie danych
+
+   -Triggers
+
+   -Change Tracking
+
+   -Change Data Capture
+
 Learning in progress...
