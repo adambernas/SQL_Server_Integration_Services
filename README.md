@@ -100,4 +100,8 @@ Odbyty plan szkolenia:
 
    -Change Data Capture
 
+   -Temporal Tables: tworzenie, dane historyczne, zmiana istniejącej tabeli
+
+   -OOps scenario
+
 Learning in progress...
