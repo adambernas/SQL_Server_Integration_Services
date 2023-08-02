@@ -104,4 +104,8 @@ Odbyty plan szkolenia:
 
    -OOps scenario
 
+11) Przyrostowe ładowanie danych
+
+   -Zasilanie bazy STAGE – procedura
+
 Learning in progress...
