@@ -108,4 +108,6 @@ Odbyty plan szkolenia:
 
    -Zasilanie bazy STAGE – procedura
 
+   -Zasilanie STAGE – CDC Task
+
 Learning in progress...

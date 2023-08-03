@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>SSIS_Szkolenie</Name>
-    <LastWriteTime>2023-07-31T17:44:12.3220892Z</LastWriteTime>
+    <LastWriteTime>2023-08-01T19:38:46.4029458Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -113,7 +113,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Lab11b_extract-cdc-proc.dtsx</Name>
-      <LastWriteTime>2023-07-31T18:11:02.814109Z</LastWriteTime>
+      <LastWriteTime>2023-07-31T18:13:09.7005846Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Lab11c_extract-cdc-task-init.dtsx</Name>
+      <LastWriteTime>2023-08-01T19:41:37.7253587Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Lab11d_extract-cdc-task-process.dtsx</Name>
+      <LastWriteTime>2023-08-01T19:54:50.4112718Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
