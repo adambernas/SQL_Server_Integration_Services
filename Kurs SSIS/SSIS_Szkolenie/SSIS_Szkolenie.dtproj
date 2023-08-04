@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-GVBA5IE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAAAWRXSL3qmM9GExiqyCE8AZK2fjmp/rqCv3D3iyFE4lsAAAAAAOgAAAAAIAACAAAAATxMJQcE3/lp83GQQ3z5wOjonSraGh+2kRoEaAZuiBpJAAAACijc2HpVLQS62ic6E5ngZOsslP/egr4dlljJXWDC+2tKB0f345knBW63UbUZFqr6cA+zuHIwc5MGz8Wgl3fE0hq0sGgufeUNNgNck+DXsDRxSZIn8gXa0n9BfJhZVLFfg7NRIlcBz4stxv7eMVhAVP10iuRmmcgaNpj6CGAq90N9xZ77mZhCCsjKwkxtT3wm5AAAAA6zdvRZcDYx38wbDCzY3UjANDeL5dIQlbNwe6FjzwopjjMJFuO6R5/0g9Gy2geU7SRTSKOyu7dDZi0oTI2lOF2g==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA4ljM8HTGckKYeB41SIhIwQAAAAACAAAAAAAQZgAAAAEAACAAAADYFiVgHRYeDf6Ms1XuZ+WL97vJnH3IYgdz923QD7aEFAAAAAAOgAAAAAIAACAAAACoUfTBizCAPkhPkdGic2viy6ATlVy/JS6QNFte1sHTspAAAAC0MUgZ1QoEbsXWWMzWGWQg4embNcua7PM1PwAlYjfudFbdP0XWuwq49z88v96rvOQDZfvJWe6xW6N6JhyRZRH46DtVGvzJl1O7aqX21GsvHTO9QE3KPJsVfSINdIlnnGFLd9c/JHmTCcyOaHNMCF5vcjIvQI7e4Ejy6EwvtvcFynjpb5SYUai42ORMKk0B4JtAAAAAFZMviavu5qQ36aCq8pS9r4ONAzFt1r4wIqSTFtkYtZ3jTIEzqhdfNCFitZeklxvcQHQLVPFrsM9HSPrkIKq8jA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -54,6 +54,7 @@
           <SSIS:Package SSIS:Name="Lab11b_extract-cdc-proc.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab11c_extract-cdc-task-init.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Lab11d_extract-cdc-task-process.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Lab11e_scd-task.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AW.conmgr" />
@@ -4368,6 +4369,23 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{F780ECCF-3374-49DA-8E66-3FD5FD396C31}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Lab11e_scd-task.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{CA3A3CBE-AB7F-4BB9-B77A-36CE02A260F2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Lab11e_scd-task</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6F0564BC-CFD8-4EF0-9EFE-E212964FA684}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

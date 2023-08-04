@@ -110,4 +110,6 @@ Odbyty plan szkolenia:
 
    -Zasilanie STAGE – CDC Task
 
+   -Slowly Changing Dimension Task
+
 Learning in progress...
