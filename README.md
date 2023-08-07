@@ -112,4 +112,4 @@ Odbyty plan szkolenia:
 
    -Slowly Changing Dimension Task
 
-Learning in progress...
+   -MERGE
